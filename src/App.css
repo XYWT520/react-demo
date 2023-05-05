@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+.div {
+  width: 200px;
+  height: 200px;
+  color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu {
+  background-color: #0070d2;
+}
+.link {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  margin: 0 10px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.link:hover {
+  background-color: #0b83de;
+  transition: all 0.3s;
+}
