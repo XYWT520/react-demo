@@ -1,26 +1,25 @@
 import React from 'react'
 import './index.scss'
-export default function GoodsItem() {
+export default function GoodsItem ({ list,onChangeInput }) {
   return (
-    <div className="my-goods-item">
+    list.map(item => (<div className="my-goods-item" key={item.id}>
       <div className="left">
         <div className="custom-control custom-checkbox">
-          <input type="checkbox" className="custom-control-input" id="input" />
-          <label className="custom-control-label" htmlFor="input">
+          <input type="checkbox" className="custom-control-input" id='input' checked={item.goods_state} onChange={(e) => onChangeInput(e, item.id)} />
+          <label className="custom-control-label" htmlFor={item}>
             <img
-              src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-              alt=""
+              src={item.goods_img}
             />
           </label>
         </div>
       </div>
       <div className="right">
-        <div className="top">商品名称</div>
+        <div className="top">{item.goods_name}</div>
         <div className="bottom">
-          <span className="price">¥ 商品价格</span>
-          <span>counter组件</span>
+          <span className="price">¥ {item.goods_price}</span>
+          <span>{item.goods_count}</span>
         </div>
       </div>
-    </div>
+    </div>))
   )
 }

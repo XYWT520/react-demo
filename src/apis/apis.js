@@ -38,3 +38,10 @@ export function patchTodoList (data, id) {
     data
   });
 }
+
+export function getGoodsItem () {
+  return service({
+    url: 'https://www.escook.cn/api/cart',
+    method: 'get',
+  });
+}

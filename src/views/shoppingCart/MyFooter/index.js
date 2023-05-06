@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.scss'
-export default function MyFooter() {
+export default function MyFooter ({ list }) {
   return (
     <div className="my-footer">
       <div className="custom-control custom-checkbox">
