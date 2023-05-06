@@ -33,6 +33,7 @@
     "jest-resolve": "^27.4.2",
     "jest-watch-typeahead": "^1.0.0",
     "mini-css-extract-plugin": "^2.4.5",
+    "node-sass-chokidar": "^2.0.0",
     "postcss": "^8.4.4",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^6.2.1",
@@ -49,6 +50,8 @@
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",
     "sass-loader": "^12.3.0",
+    "sass-resources-loader": "^2.2.5",
+    "scss": "^0.2.4",
     "semver": "^7.3.5",
     "source-map-loader": "^3.0.0",
     "style-loader": "^3.3.1",
@@ -64,7 +67,9 @@
     "start": "react-scripts start",
     "http": "node scripts/node.js",
     "build": "react-scripts build",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "eslintConfig": {
     "extends": [
