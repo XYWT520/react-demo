@@ -1,10 +1,13 @@
 import React from 'react'
 import store from '../../store'
+import Father from './Father'
+import Uncle from './Uncle'
 
 const Index = () => {
   return (
     <div>
-      <h1>1111</h1>
+      <Father></Father>
+      <Uncle></Uncle>
     </div>
   )
 }

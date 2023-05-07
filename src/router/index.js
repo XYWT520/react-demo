@@ -5,7 +5,7 @@ import User from '../views/User'
 import Routers from '../views/Routers'
 import Parent from '../views/ParentAndSon/parent.jsx'
 import ShoppingCart from '../views/shoppingCart'
-import Redux from '../views/Redux'
+import Redux from '../views/Redux/app'
 
 export default function Router () {
   return (
