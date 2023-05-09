@@ -1,7 +1,9 @@
-import thunk from "redux-thunk"
-import { createStore, applyMiddleware } from "redux"
+import thunk from 'redux-thunk'
+import logger from 'redux-logger'
+import { createStore, applyMiddleware } from 'redux'
 import RootRuducer from './reducers/index.js'
+import { composeWithDevTools } from 'redux-devtools-extension'
 
-const store = createStore(RootRuducer, applyMiddleware(thunk))
+const store = createStore(RootRuducer, composeWithDevTools(applyMiddleware(thunk, logger)))
 
 export default store

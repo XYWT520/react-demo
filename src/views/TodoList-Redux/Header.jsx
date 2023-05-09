@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { getGoodsItem } from '../../apis/apis'
 
 const Header = () => {
   const [name, setName] = useState('')
@@ -7,9 +8,11 @@ const Header = () => {
 
   const onKeyDownEnter = (e) => {
     if (e.code === 'Enter' && (name.trim() !== '')) {
-      dispatch({ type: 'todos/add', payload: name })
-      dispatch(() => {
-        console.log(1)
+      // dispatch({ type: 'todos/add', payload: name })
+      dispatch(async (dispatch) => {
+        const res = await getGoodsItem()
+        console.log(res);
+        dispatch({ type: 'todos/add', payload: name })
       })
       setName('')
     }
