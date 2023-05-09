@@ -1,0 +1,1 @@
+export const actionsFilter = (payload) => ({ type: 'filter/mod', payload })

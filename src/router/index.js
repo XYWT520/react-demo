@@ -6,6 +6,7 @@ import Routers from '../views/Routers'
 import Parent from '../views/ParentAndSon/parent.jsx'
 import ShoppingCart from '../views/shoppingCart'
 import Redux from '../views/Redux/app'
+import TodoListRedux from '../views/TodoList-Redux'
 
 export default function Router () {
   return (
@@ -13,6 +14,7 @@ export default function Router () {
       <div className="menu">
         <Link className="link" to='/'>Home</Link>
         <Link className="link" to='/todoList'>TodoList案列</Link>
+        <Link className="link" to='/TodoListRedux'>TodoListRedux</Link>
         <Link className="link" to='/user'>User</Link>
         <Link className="link" to='/router'>Router练习</Link>
         <Link className="link" to='/parent'>父子组件练习</Link>
@@ -28,6 +30,7 @@ export default function Router () {
         <Route path='/parent' element={<Parent />}></Route>
         <Route path='/shopping-cart' element={<ShoppingCart />}></Route>
         <Route path='/Redux' element={<Redux />}></Route>
+        <Route path='/TodoListRedux' element={<TodoListRedux />}></Route>
       </Routes>
     </>
   )

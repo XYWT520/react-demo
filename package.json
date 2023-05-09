@@ -49,6 +49,7 @@
     "react-router-dom": "^6.10.0",
     "react-scripts": "^5.0.1",
     "redux": "4.1",
+    "redux-chunk": "^1.0.11",
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",
     "sass-loader": "^12.3.0",
@@ -67,7 +68,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "http": "node scripts/node.js",
+    "http": "node scripts/api.js",
     "build": "react-scripts build",
     "test": "node scripts/test.js",
     "build-css": "node-sass-chokidar src/ -o src/",
