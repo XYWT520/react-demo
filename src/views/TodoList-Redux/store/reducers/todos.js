@@ -7,7 +7,6 @@ const data = [
   }
 ]
 export default function todos (state = data, { type, payload }) {
-  console.log(type, payload)
   switch (type) {
     case 'todos/delete':
       return state.filter(item => item.id !== payload)

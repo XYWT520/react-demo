@@ -4,27 +4,18 @@ import { useDispatch, useSelector } from 'react-redux'
 
 const Main = () => {
   const todos = useSelector(({ Filter, Todos }) => {
-    console.log(Filter, Todos)
-    // switch (Filter) {
-    //   case 'complete':
-    //     return Todos.filter(item => item.isDone)
-    //   case 'active':
-    //     return Todos.filter(item => !item.isDone)
-    //   default:
-    //     return Todos
-    // }
-    if (Filter === 'active') {
-      return Todos.filter(item => !item.isDone)
-    } else if (Filter === 'complete') {
-      return Todos.filter(item => item.isDone)
-    } else {
-      return Todos
+    switch (Filter) {
+      case 'complete':
+        return Todos.filter(item => item.isDone)
+      case 'active':
+        return Todos.filter(item => !item.isDone)
+      default:
+        return Todos
     }
   })
   const dispatch = useDispatch()
 
   const isChecked = todos.every(v => v.isDone)
-  console.log(isChecked)
 
   const onChange = () => {
     dispatch({ type: 'todos/setDoneAll', payload: !isChecked })
