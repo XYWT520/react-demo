@@ -3,10 +3,8 @@ import './App.css'
 
 function App () {
   return (
-    <>
-      <Router></Router>
-    </>
+    <Router></Router>
   )
 }
 
-export default App;
+export default App
